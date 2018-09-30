@@ -5,7 +5,7 @@ gem 'rails', '4.0.13'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-
+gem 'rake', '< 11.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
@@ -40,6 +40,23 @@ end
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
-
+group :development do
+	gem 'web-console', '~> 2.0'
+end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :development, :test do
+# Call 'byebug' anywhere in the code to stop execution and get a...
+gem 'byebug'
+# Access an IRB console on exception pages or by using <%= console...
+
+# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+gem 'spring'
+
+gem "rspec-rails", "~> 3.2.1"
+
+end
+
+group :test do
+gem "capybara", "~> 2.4"
+end
