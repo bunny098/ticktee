@@ -28,8 +28,13 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (4.0.2)
+    autoprefixer-rails (9.1.4)
+      execjs
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.5)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     builder (3.1.4)
     byebug (10.0.2)
     capybara (2.18.0)
@@ -56,6 +61,8 @@ GEM
     factory_girl_rails (4.9.0)
       factory_girl (~> 4.9.0)
       railties (>= 3.0.0)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     hike (1.2.3)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -117,6 +124,9 @@ GEM
       sprockets-rails (~> 2.0)
     sdoc (1.0.0)
       rdoc (>= 5.0)
+    simple_form (3.1.1)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     spring (1.7.2)
     sprockets (2.12.5)
       hike (~> 1.2)
@@ -149,10 +159,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (~> 3.3)
   byebug
   capybara (~> 2.4)
   coffee-rails (~> 4.0.0)
   factory_girl_rails (~> 4.5)
+  font-awesome-rails (~> 4.3)
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.13)
@@ -160,6 +172,7 @@ DEPENDENCIES
   rspec-rails (~> 3.2.1)
   sass-rails (~> 4.0.2)
   sdoc
+  simple_form (~> 3.1.0)
   spring
   sqlite3
   turbolinks
