@@ -2,15 +2,21 @@ require "rails_helper"
 
 RSpec.feature "Users can view tickets" do
 	before do
-		sublime=FactoryGirl.create(:project, name:"Sublime Text 3")
-				FactoryGirl.create(:ticket, project: sublime, name: "Make it shiny!",
-									description: "Gradients! Starbursts! Oh my!")
+
+		author = FactoryGirl.create(:user)
 		
-		ie=FactoryGirl.create(:project, name:"Internet Explorer")
-		   FactoryGirl.create(:ticket, project: ie, name: "Standards compliance",
-		   					   description: "Isn't a joke.")
+		sublime = FactoryGirl.create(:project, name: "Sublime Text 3")
 		
-		visit"/"
+		FactoryGirl.create(:ticket, project: sublime,
+		author: author, name: "Make it shiny!",
+		description: "Gradients! Starbursts! Oh my!")
+		
+		ie = FactoryGirl.create(:project, name: "Internet Explorer")
+		
+		FactoryGirl.create(:ticket, project: ie, author: author,
+		name: "Standards compliance", description: "Isn't a joke.")
+		
+		visit "/"
 	end
 
 	scenario "for a given project" do
