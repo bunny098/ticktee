@@ -1,4 +1,5 @@
 Ticktee::Application.routes.draw do
+  get "application/index"
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -16,6 +17,11 @@ Ticktee::Application.routes.draw do
      resources :projects do
       resources :tickets
      end
+
+     namespace :admin do
+      root "application#index"
+     end
+
 
   # Example resource route with options:
   #   resources :products do
