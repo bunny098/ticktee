@@ -1,3 +1,8 @@
+=begin
+	
+rescue Exception => e
+	
+end
 require 'rails_helper'
 
 RSpec.describe Admin::UsersController, type: :controller do
@@ -10,3 +15,4 @@ RSpec.describe Admin::UsersController, type: :controller do
   end
 
 end
+=end
