@@ -1,4 +1,5 @@
 Ticktee::Application.routes.draw do
+  get "users/index"
   get "application/index"
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
@@ -22,6 +23,7 @@ Ticktee::Application.routes.draw do
       root "application#index"
 
       resources :projects, only: [:new, :create, :destroy]
+      resources :users
      end
 
 
